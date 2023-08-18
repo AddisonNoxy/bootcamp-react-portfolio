@@ -38,12 +38,16 @@ export default function Contact() {
     };
 
     return (
-        <div id="contact-form">
-            <input type="text" placeholder="Your Name" value={name} onChange={e => setName(e.target.value)} />
-            <input type="email" placeholder="Your email address" value={email} onChange={e => setEmail(e.target.value)} />
-            <textarea placeholder="Message" value={message} onChange={e => setMessage(e.target.value)}></textarea>
-            <button onClick={submit}>Send Message</button>
-            <span className={emailSent ? 'visible' : null}>Thank you for your message!</span>
+        <div className="min-h-screen">
+            <div className="bg-cyan-400 p-10 w-full max-w-xs mx-auto text-black rounded-xl my-4">
+                <div id="contact-form rounded py-10">
+                    <label>Want to contact me?</label>
+                    <input className="my-2 rounded p-2 text-white" type="text" placeholder="Your Name" value={name} onChange={e => setName(e.target.value)} />
+                    <input className="my-2 rounded p-2 text-white" type="email" placeholder="Your email address" value={email} onChange={e => setEmail(e.target.value)} />
+                    <textarea className="my-2 rounded p-2 text-white" placeholder="Message" value={message} onChange={e => setMessage(e.target.value)}></textarea>
+                    <button className="border-black border-2 rounded p-1 bg-cyan-200 hover:bg-cyan-600 font-bold" onClick={submit}>Send Message</button>
+                </div>
+            </div>
         </div>
     )
 }
