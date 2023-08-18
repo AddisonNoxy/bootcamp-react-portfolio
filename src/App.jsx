@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <NavTabs />
-      <main className="">
+      <main>
         <Outlet />
       </main>
       <Footer />
