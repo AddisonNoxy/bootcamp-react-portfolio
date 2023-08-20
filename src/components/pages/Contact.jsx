@@ -17,25 +17,26 @@ export default function Contact() {
 
             if (!isValidEmail) {
                 alert('Must submit a valid email.');
-            }
+            } else {
 
-            const serviceId = 'service_nbupdfl';
-            const templateId = 'template_kqbmo5g';
-            const userId = '9S11CsFtiBx_aYJtu';
-            const templateParams = {
-                name,
-                email,
-                message
-            };
+                const serviceId = 'service_nbupdfl';
+                const templateId = 'template_kqbmo5g';
+                const userId = '9S11CsFtiBx_aYJtu';
+                const templateParams = {
+                    name,
+                    email,
+                    message
+                };
 
-            emailjs.send(serviceId, templateId, templateParams, userId)
-                .then(response => console.log(response))
-                .then(error => console.log(error));
+                emailjs.send(serviceId, templateId, templateParams, userId)
+                    .then(response => console.log(response))
+                    .then(error => console.log(error));
 
-            setName('');
-            setEmail('');
-            setMessage('');
-            setEmailSent(true);        
+                setName('');
+                setEmail('');
+                setMessage('');
+                setEmailSent(true);   
+            }     
         } else {
             alert('Please fill in all fields.');
         }
