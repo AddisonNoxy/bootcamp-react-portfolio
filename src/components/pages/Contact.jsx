@@ -7,8 +7,17 @@ export default function Contact() {
     const [message, setMessage] = useState('');
     const [emailSent, setEmailSent] = useState('');
 
+    const isValidEmail = email => {
+        const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return regex.test(String(email).toLowerCase());
+    };
+
     const submit = () => {
         if (name && email && message) {
+
+            if (!isValidEmail) {
+                alert('Must submit a valid email.');
+            }
 
             const serviceId = 'service_nbupdfl';
             const templateId = 'template_kqbmo5g';
@@ -31,11 +40,6 @@ export default function Contact() {
             alert('Please fill in all fields.');
         }
     }
-
-    const isValidEmail = email => {
-        const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return regex.test(String(email).toLowerCase());
-    };
 
     return (
         <div className="min-h-screen">

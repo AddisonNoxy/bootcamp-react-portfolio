@@ -1,7 +1,7 @@
 export default function Portfolio() {
     return (
-        <section className="mx-auto bg-cyan-400 py-10">
-            <h1 className="text-3xl text-black text-center font-bold">Developer Portfolio</h1>
+        <section className="mx-auto bg-cyan-400 p-10">
+            <h1 className="text-3xl text-black text-center font-bold pb-4">Developer Portfolio</h1>
 
             <div className="grid grid-cols-3 gap-4 justify-items-center">
                 <div className="card bg-cyan-600 w-96 text-center text-black pb-4">
