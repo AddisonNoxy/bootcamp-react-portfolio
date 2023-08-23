@@ -1,4 +1,4 @@
-import plannerimg from '../../assets/bootcamp-planner.png';
+import plannerimg from '../../../assets/bootcamp-planner.png';
 
 export default function Portfolio() {
     return (
