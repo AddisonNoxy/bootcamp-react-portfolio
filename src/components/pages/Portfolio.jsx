@@ -1,3 +1,5 @@
+import plannerimg from '../../assets/bootcamp-planner.png';
+
 export default function Portfolio() {
     return (
         <section className="mx-auto bg-cyan-400 p-10">
@@ -5,7 +7,7 @@ export default function Portfolio() {
 
             <div className="grid grid-cols-3 gap-4 justify-items-center">
                 <div className="card bg-cyan-600 w-96 text-center text-black pb-4">
-                    <figure><img src="../../../assets/bootcamp-planner.png"></img></figure>
+                    <figure><img src={plannerimg} /></figure>
                     <h1 className="text-xl font-bold underline hover:text-gray-600"><a href="https://github.com/AddisonNoxy/bootcamp-day-planner">Day Planner</a></h1>
                     <p>A work day scheduler, created as part of the webdev bootcamp.</p>
                 </div>
