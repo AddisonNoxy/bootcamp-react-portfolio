@@ -1,6 +1,6 @@
 # Bootcamp React Portfolio
 
-![image](./assets/example-png.png)
+![image](./assets/example-png.PNG)
 
 ## Installation
 
